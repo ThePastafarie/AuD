@@ -1,19 +1,19 @@
 /****************************************************/
 /* Vorlesung Algorithmen und Datenstrukturen        */
-/* Bruno Lang, 2020/03/20                           */
+/* Bruno Lang, 2004/04/21                           */
 /*                                                  */
 /* Implementierung der Ein- und Ausgabefunktionen   */
-/* fuer den Datentyp L_datentyp.                    */
+/* fuer den Datentyp Q_datentyp.                    */
 /****************************************************/
 
-#include <stdio.h>         /* fuer printf und scanf */
-#include "l_datentyp.h"          /* fuer L_datentyp */
+#include <stdio.h>            /* fuer printf, scanf */
+#include "q_datentyp.h"          /* fuer Q_datentyp */
 
 /* ------------------------------------------------ */
 
-/* Eingabe eines Elements vom Typ L_datentyp. */
+/* Eingabe eines Elements vom Typ Q_datentyp. */
 
-void l_datentyp_eingeben( L_datentyp *e )
+void q_datentyp_eingeben( Q_datentyp *e )
 {
    printf( "Eintrag eingeben :\n" ) ;
    scanf( "%d", e ) ;                   /* ANPASSEN */
@@ -21,9 +21,10 @@ void l_datentyp_eingeben( L_datentyp *e )
 
 /* ------------------------------------------------ */
 
-/* Ausgabe eines Elements vom Typ L_datentyp. */
+/* Ausgabe eines Elements vom Typ Q_datentyp. */
 
-void l_datentyp_ausgeben( L_datentyp e )
+void q_datentyp_ausgeben( Q_datentyp e )
 {
    printf( " %d", e ) ;                 /* ANPASSEN */
 }
+

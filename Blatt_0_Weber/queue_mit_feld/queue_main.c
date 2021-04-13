@@ -3,48 +3,43 @@
 /* Andreas Frommer, 25.04.2000                      */
 /* Aktualisiert: Bruno Lang, 2003/04/28, 2004/04/21 */
 /*                                                  */
-/* Hier werden die Funktionen einer (einfach        */
-/* verketteten) Liste getestet.                     */
+/* Hier werden die Funktionen einer Queue getestet. */
 /*                                                  */
-/* Der Typ der Listeneintraege ist zunaechst int,   */
-/* er ist in Anwendungen der Liste jeweils          */
+/* Der Typ der Queue-Eintraege ist zunaechst int,   */
+/* er ist in Anwendungen der Queue jeweils          */
 /* ANZUPASSEN.                                      */
 /*                                                  */
-/* Implementierung der Liste mit Zeigern.           */
+/* Implementierung der Queue mit einem Feld.        */
 /****************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
 
 #include "boolean.h"       /* fuer Datentyp Boolean */
-#include "l_datentyp.h"          /* fuer L_datentyp */
-#include "liste.h"        /* fuer Listenoperationen */
+#include "q_datentyp.h"          /* fuer Q_datentyp */
+#include "queue.h"        /* fuer Queue-Operationen */
 
 /* ------------------------------------------------ */
 
-/* Hauptprogramm zum Testen der Listenoperationen */
+/* Hauptprogramm zum Testen der Queue-Operationen */
 
 int main( void )
 {
-   Liste l;
-   L_datentyp e ;
+   Queue q ;
+   Q_datentyp e ;
              /* einzufuegende bzw. geloeschte Daten */
    char c ;
-        /* Auswahl einer moeglichen Listenoperation */
+         /* Auswahl einer moeglichen Queueoperation */
    Boolean weiter = TRUE ;    /* Programm beenden ? */
-
-   l_create( &l ) ;
 
    while ( weiter ) {
 
          /* Menue ausgeben ... */
 
-//      printf( "c [create]  Liste erzeugen\n" ) ;
-      printf( "i [insert]  Element einfuegen\n" ) ;
-      printf( "d [delete]  Element entfernen\n" ) ;
-      printf( "o [out]     out_of_list ?\n" ) ;
-      printf( "r [reset]   pos-Zeiger\n" ) ;
-      printf( "a [advance] pos-Zeiger\n" ) ;
+      printf( "c [create]  Queue erzeugen\n" ) ;
+      printf( "i [enqueue] Element einfuegen\n" ) ;
+      printf( "d [dequeue] Element entfernen\n" ) ;
+      printf( "e [empty]   Queue leer ?\n" ) ;
       printf( "q [quit]    Programm verlassen\n" ) ;
 
          /* Auswahl treffen und Aktion ausfuehren */
@@ -52,33 +47,27 @@ int main( void )
       c = getchar() ;
       switch( c ) {
          case 'c' :
-            l_create( &l ) ;
+            q_create( &q ) ;
             break ;
          case 'i' :
-            l_datentyp_eingeben( &e ) ;
-            l_insert( e, &l ) ;
+            q_datentyp_eingeben( &e ) ;
+            q_enqueue( e, &q ) ;
             break ;
          case 'd' :
-            l_delete( &l, &e ) ;
+            q_dequeue( &q, &e ) ;
             printf( "Entferntes Element: " ) ;
-            l_datentyp_ausgeben( e ) ;
+            q_datentyp_ausgeben( e ) ;
             printf( "\n" ) ;
             break ;
-         case 'o' :
-            printf( "l_out_of_list = %s\n",
-             l_out_of_list( l ) ? "TRUE" : "FALSE" ) ;
-            break ;
-         case 'r' :
-            l_reset( &l ) ;
-            break ;
-         case 'a' :
-            l_advance( &l ) ;
+         case 'e' :
+            printf( "q_empty = %s\n",
+               q_empty( q ) ? "TRUE" : "FALSE" ) ;
             break ;
          case 'q' :
             weiter = FALSE ;
             break ;
       }
-      l_write( l ) ;
+      q_write( q ) ;
       getchar() ;            /* <RETURN> uebergehen */
       printf( "\n" ) ;
    }

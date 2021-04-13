@@ -140,3 +140,6 @@ void l_write( Liste l )
    printf( " )\n" ) ;
 }
 
+void l_write_rekusiv( L_knoten* anf ){
+
+}

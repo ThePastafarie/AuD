@@ -1,0 +1,31 @@
+/*
+Peter Weber 1936796
+Gruppe 4
+
+Blatt 0
+Aufgabe 2
+*/
+
+b)
+Alle .c und .h files werden zu einer ausfürbaren Datei kompeliert.
+
+c)
+gcc -std=c11 -Wall -c l_datentyp.c
+gcc -std=c11 -Wall l_datentyp.o liste.o liste_main.o -o liste_mit_zeigern
+
+Nur l_datentyp.c wird zu einem orbjekt file kompeliert,
+danach werden alle orbjekt files wieder durch den linker zu einer executable verarbeitet.
+
+d)
+gcc -std=c11 -Wall -c l_datentyp.c
+gcc -std=c11 -Wall -c liste.c
+gcc -std=c11 -Wall -c liste_main.c
+gcc -std=c11 -Wall l_datentyp.o liste.o liste_main.o -o liste_mit_zeigern
+
+bei verändertem .h file werden alle .c files die diese .h datei importieren neu kompeliert.
+
+e)
+Es spart zeit.
+Man kann sehr einfach neue .c und .h dateien einbinden und es ist übersichtliche.
+
+f)
