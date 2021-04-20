@@ -34,8 +34,7 @@ void dcl_delete( Liste *l, L_datentyp *e )
                    /* zeigt auf wegfallenden Knoten */
 
    if ( dcl_out_of_list( *l ) )
-      printf( "Fehler: Zeiger pos zeigt nicht "
-		  "auf ein Listenelement\n" ) ;
+      printf( "Fehler: Zeiger pos zeigt nicht auf ein Listenelement\n" ) ;
    else {
 	*e = weg->l_daten ;
 
@@ -77,14 +76,14 @@ void dcl_insert( L_datentyp e, Liste *l )
 
                  /* neuen Knoten in Liste einbinden */
    if ( l->pos != NULL ){
-     l->pos->l_prev = neu ;
+      l->pos->l_prev = neu ;
    }
    if( l->pos_vorg != NULL ){
-     l->pos_vorg->l_next = neu ;
+      l->pos_vorg->l_next = neu ;
    }
 
    if ( l->pos == l->anf ){
-     l->anf = neu ;
+      l->anf = neu ;
    }
 
 	   /* neuer Knoten liegt vor Einfuegeposition */

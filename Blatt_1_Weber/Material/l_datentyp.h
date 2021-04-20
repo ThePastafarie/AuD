@@ -11,7 +11,7 @@
    #define L_DATENTYP_H
 
    typedef int L_datentyp ;
-               /* Typ der Listeneintraege, ANPASSEN */
+      /* Typ der Listeneintraege, ANPASSEN */
 
       /* Ein- und Ausgabeoperationen */
 

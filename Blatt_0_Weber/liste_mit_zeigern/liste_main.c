@@ -66,7 +66,7 @@ int main( void )
             break ;
          case 'o' :
             printf( "l_out_of_list = %s\n",
-             l_out_of_list( l ) ? "TRUE" : "FALSE" ) ;
+            l_out_of_list( l ) ? "TRUE" : "FALSE" ) ;
             break ;
          case 'r' :
             l_reset( &l ) ;

@@ -15,7 +15,7 @@
 
 void l_datentyp_eingeben( L_datentyp *e )
 {
-   printf( "Eintrag eingeben :\n" ) ;
+   printf( "Eintrag eingeben : " ) ;
    scanf( "%d", e ) ;                   /* ANPASSEN */
 }
 

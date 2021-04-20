@@ -5,17 +5,16 @@ int ggTeiler (int a, int b);
 
 int main (void){
 
-    int a = NULL;
-    int b = NULL;
-
+    int a = 10;
+    int b = 32;
+    int r = NULL;
+    int m = NULL;
 
 
 }
 
 int ggTeiler (int a, int b){
-    if (b =! 0){
-
-    }else{
-        
+    while(b != 0){
+        a = m*b+r;
     }
 }
