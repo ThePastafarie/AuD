@@ -1,0 +1,47 @@
+
+1
+    a)
+    do{
+        l_datentyp_eingeben(&e);
+        if(e != 0){
+            dcl_insert(e, &l);
+        }
+    }while(e != 0);
+
+    b)
+        void dcl_reset(&l)
+        int menge_a = 1;
+    do{
+        dcl_advance(&l);
+        menge_a++
+    }while(l.pos->l_next != NULL);
+
+    c)
+        printf("Summe in ursprünglicher Reinenfolge: \n");
+        void dcl_reset(&l)
+    e = l.pos->l_daten;
+        l_datentyp_ausgeben(e);
+    do{
+        dcl_advance(&l);
+        e = l.pos->l_daten;
+        l_datentyp_ausgeben(e);
+    }while(l.pos->l_next != NULL);
+    printf("\n");
+
+
+    d)
+    Stack:
+    Nein LIFO
+
+    Queues:
+        printf("Summe in ursprünglicher Reinenfolge: \n");
+    do{
+        q_dequeue( &q, &e ) ;
+        l_datentyp_ausgeben(e);
+    }while(l.pos->l_next != NULL);
+    printf("\n");
+
+2
+    q_create( &q1 ) ;
+    q_create( &q2 ) ;
+
