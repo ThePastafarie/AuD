@@ -82,6 +82,5 @@ int main( void )
       getchar() ;            /* <RETURN> uebergehen */
       printf( "\n" ) ;
    }
-
    return 0 ;
 }
